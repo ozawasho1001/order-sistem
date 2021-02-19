@@ -1,0 +1,14 @@
+<div>
+  <h1 class="admin">管理者 新規登録画面</h1>
+  <%= form_with model: [:admin, @user] do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.label :mail %>
+    <%= f.email_field :mail %>
+    <%= f.label :password %>
+    <%= f.text_field :password %>
+    <%= f.label :confirmation %>
+    <%= f.text_field :password %>
+    <%= f.submit '登録' %>
+  <% end %>
+<div>
