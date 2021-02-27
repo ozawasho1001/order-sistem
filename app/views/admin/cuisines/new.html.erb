@@ -1,0 +1,15 @@
+<div>
+  <p>商品登録</p>
+  <%= form_with model: [:admin, @cuisine] do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name, placeholder: "商品名を入力してね！" %>
+    <%= f.label :price %>
+    <%= f.text_field :price, placeholder: "値段を入力してね！" %>
+    <%= f.label :detail %>
+    <%= f.text_area :text, placeholder: "商品の詳細を入力してね！" %>
+    <%= f.label :img %>
+    <%= f.file_field :image %>
+    <%= f.submit '登録' %>
+  <% end %>
+  
+</div>
