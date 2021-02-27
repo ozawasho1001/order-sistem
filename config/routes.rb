@@ -4,9 +4,14 @@ Rails.application.routes.draw do
   #管理者
   namespace :admin do
     resources :users
+    
     get "/login", to: "sessions#new"
     post "/login", to: "sessions#create", as: "administrator_login"
-    get "/topic", to: "topics#index"
+    delete '/logout',  to: 'sessions#destroy'
+    
     resources :cuisines
+    
+    get "topics", to: "topics#index"
   end
+  
 end

@@ -5,4 +5,6 @@ class Cuisine < ApplicationRecord
   validates :text, presence: true
   validates :image, presence: true
   
+  belongs_to :user
+  mount_uploader :image, ImageUploader
 end
