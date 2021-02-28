@@ -1,3 +1,14 @@
 <div>
-　user新規登録画面
-</div>
+  <h1 class="new_users"> 新規user画面</h1>
+  <%= form_with model: @user do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name, placeholder: "ユーザ名を入力してね！" %>
+    <%= f.label :email %>
+    <%= f.email_field :email, placeholder: "メールアドレスを入力してね！" %>
+    <%= f.label :password %>
+    <%= f.password_field :password, placeholder: "パスワードを入力してね" %>
+    <%= f.label :confirmation %>
+    <%= f.password_field :password, placeholder: "もう一度パスワードを入力してね！" %>
+    <%= f.submit '登録' %>
+  <% end %>
+<div>

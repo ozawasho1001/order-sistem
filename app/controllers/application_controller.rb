@@ -10,5 +10,10 @@ class ApplicationController < ActionController::Base
   def logged_in?
     !current_user.nil?
   end
-    
+  
+  # authorize_resource :class => false
+  # rescue_from CanCan::AccessDenied do |exceptionš|
+  #   # root_urlに飛ばす。
+  #   redirect_to users_path
+  # end
 end

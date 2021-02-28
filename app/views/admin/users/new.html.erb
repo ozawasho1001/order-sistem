@@ -3,8 +3,8 @@
   <%= form_with model: [:admin, @user] do |f| %>
     <%= f.label :name %>
     <%= f.text_field :name, placeholder: "ユーザ名を入力してね！" %>
-    <%= f.label :mail %>
-    <%= f.email_field :mail, placeholder: "メールアドレスを入力してね！" %>
+    <%= f.label :email %>
+    <%= f.email_field :email, placeholder: "メールアドレスを入力してね！" %>
     <%= f.label :password %>
     <%= f.password_field :password, placeholder: "パスワードを入力してね" %>
     <%= f.label :confirmation %>

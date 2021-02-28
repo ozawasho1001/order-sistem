@@ -5,9 +5,9 @@ class Admin::CuisinesController < ApplicationController
   end
   
   def create
-    @cuisine = Cuisine.new(cuisine_params)
+    @cuisine = current_user.cuisine.new(cuisine_params)
     
-    if @cuisine.save!
+    if @cuisine.save
       redirect_to admin_cuisines_path, succes: "投稿に成功しました"
     else
       flash.now[:danger] = "投稿に失敗しました"
@@ -17,6 +17,7 @@ class Admin::CuisinesController < ApplicationController
   
   
   def index
+    @cuisine = Cuisine.all
   end
   
   private
