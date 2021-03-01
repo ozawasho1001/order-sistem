@@ -1,1 +1,6 @@
-@import 'users.scss';
+/*
+ *= require_self
+ *= require_tree .
+*/
+@import "bootstrap-sprocketes";
+@import "bootstrap";
