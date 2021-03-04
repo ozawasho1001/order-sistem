@@ -13,6 +13,18 @@
     <% flash.each do |key, value| %>
       <div class="alert alert-<%= key %>" role="alert"><%= value %></div>
     <% end %>
+      <div class="link_wrapper">
+        <div class="main_logo_group">
+          <a href="/">
+            <%= image_tag "main-logo", class: "main_logo_img" %>
+          </a>
+          <p>ー 美味しいで元気に 。</p>
+        </div>
+        <div class="link_group">
+          <%= link_to "Sign UP","/users/new", class: "admin_link sign_up_link" %>
+          <%= link_to "Sign In", "/users", class: "admin_link sign_in_link"  %>
+        </div>
+      </div>
     <%= yield %>
   </body>
 </html>

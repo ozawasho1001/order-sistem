@@ -1,5 +1,5 @@
 class Admin::UsersController < ApplicationController
- 
+ before_action :admin_logged_in_user
   def new
     @user = User.new
   end
@@ -21,4 +21,11 @@ class Admin::UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:name, :email, :password)
   end
+  
+  def admin_logged_in_user
+    if !admin_logged_in_user
+      redirect_to admin_login_url
+    end
+  end
+  
 end

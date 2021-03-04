@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_27_085641) do
+ActiveRecord::Schema.define(version: 2021_03_03_080439) do
 
   create_table "cuisines", force: :cascade do |t|
     t.string "name"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 2021_02_27_085641) do
     t.string "email"
     t.string "password_digest"
     t.integer "role", default: 1, null: false
+    t.string "admin"
   end
 
 end

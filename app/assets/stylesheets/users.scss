@@ -1,6 +1,76 @@
 body {
-    margin: 0;
+  margin: 0;
 }
 .link_wrapper {
-    background-color: black;
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+}
+.link_wrapper .main_logo_group {
+  display: flex;
+  align-items: center;
+}
+.link_wrapper .main_logo_group > p {
+  font-size: 25px;
+  color: white;
+}
+.main_logo_img {
+  margin-left: 40px;
+}
+.main_logo_img:hover {
+  opacity: 0.5;
+}
+.link_group {
+  font-size: 30px;
+  margin: 40px 40px 0 0;
+}
+.admin_link {
+  text-decoration: auto;
+  border: 2px solid #337ab7;
+  color: #337ab7;
+  padding: 10px;
+  border-radius: 30px;
+}
+.admin_link:hover {
+  opacity: 0.5;
+}
+.admin_background_img {
+  background-image: url(visual-01-sp.jpg);
+  height: 90vh;
+  width: 100%;
+}
+.user_new_registration {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.user_new_registration .user_new_label_form_group {
+  display: flex;
+  width: 50%;
+  margin-top: 10%;
+}
+.user_new_registration .user_new_label_form_group .common_label_form_group {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.user_new_registration .user_new_label_form_group .label_group {
+  font-size: 30px;
+}
+.user_new_registration .user_new_label_form_group .form-group > input {
+  height: 30px;
+  margin-bottom: 10px;
+}
+.user_new_registration .user_new_submit .btn {
+  margin-top: 30px;
+  font-size: 30px;
+  background-color: white;
+  border-color: #337AB7;
+  color: #337AB7;
+  border-radius: 30px;
+  padding: 10px;
+  border-width: thick;
+}
+.user_new_registration .user_new_submit .btn:hover {
+  opacity: 0.5;
 }
