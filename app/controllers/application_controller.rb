@@ -11,6 +11,14 @@ class ApplicationController < ActionController::Base
     !current_user.nil?
   end
   
+  def admin_logged_in?
+    if !current_user.nil?
+      @current_user.admin?
+    else
+      false
+    end
+  end
+  
   # authorize_resource :class => false
   # rescue_from CanCan::AccessDenied do |exceptionš|
   #   # root_urlに飛ばす。
