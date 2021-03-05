@@ -1,4 +1,5 @@
 class Admin::CuisinesController < ApplicationController
+  layout "admin"
   
   def new
     @cuisine = Cuisine.new

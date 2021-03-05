@@ -1,5 +1,5 @@
-class Admin::SessionsController < ApplicationController
-  layout "admin"
+class SessionsController < ApplicationController
+  layout "front"
   
   def new
   end
@@ -8,7 +8,7 @@ class Admin::SessionsController < ApplicationController
     user = User.find_by(email: params[:session][:email])
     if user && user.authenticate(params[:session][:password])
       log_in user
-      redirect_to admin_topics_path, success: 'ログインに成功しました'
+      redirect_to cuisines_path, success: 'ログインに成功しました'
     else
       flash.now[:danger] = 'ログインに失敗しました'
       render :new
@@ -17,16 +17,17 @@ class Admin::SessionsController < ApplicationController
   
   def destroy
     log_out
-    redirect_to admin_topics_path, info: 'ログアウトしました'
+    redirect_to root_path, info: "ログアウトしました"
   end
   
+
   private
   def log_in(user)
     session[:user_id] = user.id
   end
-  
+
   def log_out
     session.delete(:user_id)
     @current_user = nil
-  end
+  end  
 end
