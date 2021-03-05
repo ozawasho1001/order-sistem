@@ -1,5 +1,7 @@
 class Admin::UsersController < ApplicationController
- before_action :admin_logged_in_user
+# before_action :admin_logged_in_user
+  layout "admin"
+ 
   def new
     @user = User.new
   end

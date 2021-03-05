@@ -1,4 +1,4 @@
-<%= form_with model: @user do |f| %>
+<%= form_for :session, url: login_path do |f| %>
   <div class="user_new_registration">
     <div class="user_new_label_form_group">
       <div class="common_label_form_group label_group">    
@@ -8,15 +8,14 @@
         <%= f.label :confirmation %>
       </div>
       <div class="common_label_form_group form-group">
-        <%= f.text_field :name, placeholder: "ユーザ名を入力してね！" %>
-        <%= f.email_field :email, placeholder: "メールアドレスを入力してね！" %>
-        <%= f.password_field :password, placeholder: "パスワードを入力してね！" %>
+        <%= f.text_field :name, placeholder: "登録した名前を入力してね！" %>
+        <%= f.email_field :email, placeholder: "登録したメールアドレスを入力してね！" %>
+        <%= f.password_field :password, placeholder: "登録したパスワードを入力してね！" %>
         <%= f.password_field :password, placeholder: "もう一度パスワードを入力してね！" %>
       </div>
     </div>
     <div class="user_new_submit">
-      <button type="submit" class="btn">Sign Up</button>
+      <button type="submit" class="btn">Sign In</button>
     </div>
   </div>
 <% end %>
-
