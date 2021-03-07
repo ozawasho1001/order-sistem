@@ -1,1 +1,6 @@
-<p>hohohohhohoohoh</p>
+<% @cuisines.each do |cuisine| %>
+  <%= cuisine.name %>
+  <%= cuisine.price  %>
+  <%= cuisine.text  %>
+  <%= image_tag cuisine.image.url %>
+<% end %>

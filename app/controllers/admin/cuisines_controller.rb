@@ -17,6 +17,7 @@ class Admin::CuisinesController < ApplicationController
   end
   
   def index
+    @cuisines = Cuisine.all
   end
   
   private
