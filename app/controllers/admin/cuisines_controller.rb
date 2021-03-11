@@ -9,16 +9,15 @@ class Admin::CuisinesController < ApplicationController
     @cuisine = current_user.cuisines.new(cuisine_params)
     
     if @cuisine.save
-      redirect_to admin_cuisines_path, succes: "投稿に成功しました"
+      redirect_to admin_cuisines_path, succes: "投稿に成功しました。"
     else
-      flash.now[:danger] = "投稿に失敗しました"
+      flash.now[:danger] = "投稿に失敗しました。"
       render :new
     end
   end
   
-  
   def index
-    @cuisine = Cuisine.all
+    @cuisines = Cuisine.all
   end
   
   private

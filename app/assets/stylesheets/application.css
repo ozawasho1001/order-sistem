@@ -4,3 +4,6 @@
 */
 @import "bootstrap-sprocketes";
 @import "bootstrap";
+body {
+  position: relative;
+}

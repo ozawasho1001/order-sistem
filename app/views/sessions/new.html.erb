@@ -2,16 +2,12 @@
   <div class="user_new_registration">
     <div class="user_new_label_form_group">
       <div class="common_label_form_group label_group">    
-        <%= f.label :name %>
         <%= f.label :email %>
         <%= f.label :password %>
-        <%= f.label :confirmation %>
       </div>
       <div class="common_label_form_group form-group">
-        <%= f.text_field :name, placeholder: "登録した名前を入力してね！" %>
         <%= f.email_field :email, placeholder: "登録したメールアドレスを入力してね！" %>
         <%= f.password_field :password, placeholder: "登録したパスワードを入力してね！" %>
-        <%= f.password_field :password, placeholder: "もう一度パスワードを入力してね！" %>
       </div>
     </div>
     <div class="user_new_submit">
