@@ -1,5 +1,6 @@
 class Admin::UsersController < ApplicationController
- before_action :admin_logged_in_user
+  before_action :require_permission
+  
   layout "admin"
  
   def new

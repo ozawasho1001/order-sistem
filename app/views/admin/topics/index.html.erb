@@ -6,9 +6,11 @@
     <%= link_to "商品管理", "/admin/cuisines/new" %>
   </div>
   <div>
-    <%= link_to "管理者新規登録","/admin/users/new" %>
+    <!--<% if current_user && current_user.admin %>-->
+      <%= link_to "管理者新規登録","/admin/users/new" %>
+    <!--<% end %>-->
   </div>
   <div>
-    <%= link_to "Log Out", " admin_logout_path", method: :delete %>
+    <%= link_to "Log Out", "/logout", method: :delete %>
   </div>
 </div>
