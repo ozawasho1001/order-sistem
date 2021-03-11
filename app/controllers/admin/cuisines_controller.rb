@@ -1,4 +1,5 @@
 class Admin::CuisinesController < ApplicationController
+  before_action :require_permission
   layout "admin"
   
   def new
