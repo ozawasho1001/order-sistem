@@ -1,10 +1,11 @@
 #topics_link_group {
-  display: flex;
-  margin: 10% 10% 0 10%;
+  width: 50%;
+  margin: 10% auto 0 auto;
+  text-align: center;
 }
 #topics_link_group div {
-  font-size: 30px;
-  margin: 0 5%;
+  font-size: 40px;
+  margin-bottom: 30px;
 }
 #topics_link_group div a {
   text-decoration: none;

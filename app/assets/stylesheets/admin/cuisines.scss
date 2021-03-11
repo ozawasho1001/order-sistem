@@ -1,3 +1,56 @@
+//
+// 管理者の商品の登録ページのscss
+// 
+.product_registration_title {
+  width: 50%;
+  margin: 5% auto 0 auto;
+  text-align: center;
+  color: #337ab7;;
+  font-weight: bold;
+}
+.product_registration_group {
+  width: 50%;
+  margin: 5% auto 0 auto;
+  text-align: center
+}
+.product_common_group {
+  margin-bottom: 30px;
+}
+.product_common_group label {
+  font-size: 30px;
+}
+.product_common_group input {
+  width: 50%;
+  height: 30px;
+  margin-left: 40px;
+}
+.product_common_group textarea {
+  height: 30px;
+  width: 50%;
+  margin-left: 30px;
+}
+.product_registration_botton {
+  font-size: 30px;
+  width: 20%;
+  margin: auto;
+  text-align: center;
+}
+.product_registration_tag {
+  position: absolute;
+  right: 6%;
+  top: 30px;
+}
+.product_registration_tag a {
+  font-size: 30px;
+  padding: 10px;
+  border: 2px solid #337ab7;
+  color: #337ab7;
+  text-decoration: auto;
+  border-radius: 30px;
+}
+// 
+// 管理者の商品一覧ページのscss
+// 
 #product_list {
   display: flex;
   flex-wrap: wrap;
@@ -11,7 +64,6 @@
   flex-direction: column;
   align-items: center;
 }
-
 .product_image {
   width: 300px;
   height: 250px;

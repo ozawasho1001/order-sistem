@@ -1,25 +1,33 @@
+.admin_login_title {
+  width: 50%;
+  margin: 10% auto 0 auto;
+  text-align: center;
+}
 #admin_login {
-    margin: 20% 0 0 35%;
+  text-align: center;
+  margin-top: 10%;
 }
-#admin_login .admin_login_label_form_group {
-    display: flex;
+#admin_login .admin_login_email_group {
+  margin-bottom: 20px;
 }
-#admin_login .admin_login_label_form_group .admin_loin_label_wrap {
-  display: flex;
-  flex-direction: column;
+#admin_login .admin_login_email_group label {
   font-size: 30px;
 }
-#admin_login .admin_login_label_form_group .admin_loin_label_wrap label {
-  margin-bottom: 17px;
+#admin_login .admin_login_email_group input {
+  margin-left: 10%;
+  width: 20%;
+  height: 30px;
 }
-
-#admin_login .admin_login_label_form_group .admin_login_form_wrap {
-  display: flex;
-  flex-direction: column;
-  margin-left: 30px;
+#admin_login .admin_login_password_group label {
+  font-size: 30px;
+  margin-right: 10px;
 }
-#admin_login .admin_login_label_form_group .admin_login_form_wrap input {
-  height: 34px;
-  width: 100%;
-  margin-bottom: 20px;
+#admin_login .admin_login_password_group input {
+  margin-left: 5%;
+  width: 20%;
+  height: 30px;
+}
+#admin_login .admin_log_in_button input {
+  margin-top: 30px;
+  font-size: 20px;
 }

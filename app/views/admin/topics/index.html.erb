@@ -1,16 +1,16 @@
 <div id="topics_link_group">
   <div>
-    <%= link_to "user管理", "/" %>
+    <%= link_to "ユーザ管理", "/" %>
   </div>
   <div>
     <%= link_to "商品管理", "/admin/cuisines/new" %>
   </div>
   <div>
-    <!--<% if current_user && current_user.admin %>-->
+    <% if current_user && current_user.admin %>
       <%= link_to "管理者新規登録","/admin/users/new" %>
-    <!--<% end %>-->
+    <% end %>
   </div>
   <div>
-    <%= link_to "Log Out", "/logout", method: :delete %>
+    <%= link_to "ログアウト", "/logout", method: :delete %>
   </div>
 </div>
