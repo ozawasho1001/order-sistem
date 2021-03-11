@@ -1,6 +1,20 @@
-<% @cuisines.each do |cuisine| %>
-  <%= cuisine.name %>
-  <%= cuisine.price  %>
-  <%= cuisine.text  %>
-  <%= image_tag cuisine.image.url %>
-<% end %>
+<div id="product_list">
+  <% @cuisines.each do |cuisine| %>
+    <div class="card">
+      <%= image_tag cuisine.image.url, class: "product_image" %>
+      <div>
+        <%= cuisine.name %>
+      </div>
+      <div>
+        <%= cuisine.text  %>
+      </div>
+      <div>
+        <%= cuisine.price  %>
+      </div>
+      <div class="product_list_edit_delete_wrap">      
+        <%= link_to "編集", "/admin/cuisines" %>
+        <%= link_to "削除", "/admin/cuisines" %>
+      </div>
+    </div>
+  <% end %>
+</div>

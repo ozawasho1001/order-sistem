@@ -1,6 +1,14 @@
-<header>
+<div id="topics_link_group">
   <div>
-    <%= link_to "user管理画面", "/" %>
-    <%= link_to "商品管理画面", "/admin/cuisines/new" %>
+    <%= link_to "user管理", "/" %>
   </div>
-</header>
+  <div>
+    <%= link_to "商品管理", "/admin/cuisines/new" %>
+  </div>
+  <div>
+    <%= link_to "管理者新規登録","/admin/users/new" %>
+  </div>
+  <div>
+    <%= link_to "Log Out", " admin_logout_path", method: :delete %>
+  </div>
+</div>

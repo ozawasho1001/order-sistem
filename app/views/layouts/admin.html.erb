@@ -15,15 +15,10 @@
     <% end %>
       <div class="link_wrapper">
         <div class="main_logo_group">
-          <a href="/admin/users">
+          <a href="/admin/topics">
             <%= image_tag "main-logo", class: "main_logo_img" %>
           </a>
           <p>- Cherish deliciousness</p>
-        </div>
-        <div class="link_group">
-          <%= link_to "Sign UP","/admin/users/new", class: "admin_link sign_up_link" %>
-          <%= link_to "Sign In", "/admin/login", class: "admin_link sign_in_link"  %>
-          <%= link_to "Log Out", "/logout", method: :delete, class: "admin_link" %>
         </div>
       </div>
     <%= yield %>

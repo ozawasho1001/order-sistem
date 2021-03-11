@@ -1,5 +1,5 @@
 class Admin::UsersController < ApplicationController
-# before_action :admin_logged_in_user
+ before_action :admin_logged_in_user
   layout "admin"
  
   def new
@@ -16,16 +16,18 @@ class Admin::UsersController < ApplicationController
     end
   end
   
-  def index
+  def destroy
+    log_out
+    redirect_to logout_path, info: "ログアウトしました。"
   end
-  
+
   private
   def user_params
     params.require(:user).permit(:name, :email, :password)
   end
   
   def admin_logged_in_user
-    if !admin_logged_in_user
+    if !admin_logged_in?
       redirect_to admin_login_url
     end
   end

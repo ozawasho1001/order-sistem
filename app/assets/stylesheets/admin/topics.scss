@@ -1,3 +1,11 @@
-// Place all the styles related to the admin/topics controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+#topics_link_group {
+  display: flex;
+  margin: 10% 10% 0 10%;
+}
+#topics_link_group div {
+  font-size: 30px;
+  margin: 0 5%;
+}
+#topics_link_group div a {
+  text-decoration: none;
+}
