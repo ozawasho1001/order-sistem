@@ -1,6 +1,5 @@
 class Admin::UsersController < ApplicationController
   before_action :require_permission
-  
   layout "admin"
  
   def new
@@ -15,6 +14,10 @@ class Admin::UsersController < ApplicationController
       flash.now[:danger] = '登録失敗です'
       render :new
     end
+  end
+  
+  def index
+    @user = User.all
   end
   
   def destroy

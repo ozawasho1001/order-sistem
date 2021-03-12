@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   layout "front"
   def new
-    @user = User.new
+   @user = User.new
   end
   
   def create
@@ -11,7 +11,7 @@ class UsersController < ApplicationController
     else
       flash.now[:danger] = "登録失敗です"
       render :new
-    end
+   end
   end
   
   def index
