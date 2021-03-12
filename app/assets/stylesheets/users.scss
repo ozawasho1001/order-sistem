@@ -121,3 +121,26 @@ body {
 .admin_user_registration_button input {
   font-size: 30px;
 }
+// 
+// adminのuser一覧画面のscss
+// 
+table{
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+table tr{
+  border-bottom: solid 1px #eee;
+  cursor: pointer;
+}
+
+table tr:hover{
+  background-color: #d4f0fd;
+}
+
+table th,table td{
+  text-align: center;
+  width: 20%;
+  padding: 15px 0;
+}

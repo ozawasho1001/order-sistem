@@ -1,0 +1,18 @@
+<table>
+  <tr>
+    <th>お名前</th>
+    <th>メール</th>
+    <th>管理者</th>
+    <th>編集</th>
+    <th>削除</th>
+  </tr>
+  <% @user.each do |user| %>
+    <tr>
+      <td><%= user.name %></td>
+      <td><%= user.email %></td>
+      <td><%= user.admin%></td>
+      <td><%= "編集" %></td>
+      <td><%= "削除" %></td>
+    </tr>
+  <% end  %>
+</table>
