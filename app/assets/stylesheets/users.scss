@@ -1,3 +1,6 @@
+// 
+// ユーザーページ全ての共通css
+// front.html.erb のcss
 body {
   margin: 0;
 }
@@ -26,21 +29,27 @@ body {
   font-size: 30px;
   margin: 40px 40px 0 0;
 }
-.admin_link {
+.front_common_link {
   text-decoration: auto;
   border: 2px solid #337ab7;
   color: #337ab7;
   padding: 10px;
   border-radius: 30px;
 }
-.admin_link:hover {
+.front_common_link:hover {
   opacity: 0.5;
 }
+// 
+// ユーザのTOPページのcss
+// 
 .admin_background_img {
   background-image: url(visual-01-sp.jpg);
   height: 90vh;
   width: 100%;
 }
+// 
+// ユーザーの新規登録のページのcss
+// 
 .user_new_registration {
   display: flex;
   flex-direction: column;
@@ -85,4 +94,30 @@ body {
   left: 45%;
   color: #337ab7;
   font-size: 20px;
+}
+// 
+// 管理者のユーザー新規登録ページのscss
+// 
+.admin_users_new_title {
+  text-align: center;
+  margin-top: 5%;
+  color: #337ab7;
+}
+.admin_user_registration_group{
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  margin-top: 5%;
+}
+.admin_user_registration_group .label_common input {
+  margin-left: 15%;
+}
+.admin_user_registration_group .admin_registration_password_wrap input {
+  margin-left: 50px;
+}
+.admin_user_registration_button {
+  text-align: center;
+}
+.admin_user_registration_button input {
+  font-size: 30px;
 }
