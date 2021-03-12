@@ -11,7 +11,7 @@
       <td><%= user.name %></td>
       <td><%= user.email %></td>
       <td><%= user.admin%></td>
-      <td><%= "編集" %></td>
+      <td><%= link_to "編集", "/admin/users/:id/edit" %></td>
       <td><%= "削除" %></td>
     </tr>
   <% end  %>

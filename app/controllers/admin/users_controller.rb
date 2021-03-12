@@ -20,6 +20,9 @@ class Admin::UsersController < ApplicationController
     @user = User.all
   end
   
+  def edit
+  end
+  
   def destroy
     log_out
     redirect_to logout_path, info: "ログアウトしました。"
@@ -35,5 +38,4 @@ class Admin::UsersController < ApplicationController
       redirect_to admin_login_url
     end
   end
-  
 end
