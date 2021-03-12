@@ -1,14 +1,26 @@
 <div>
-  <h1 class="admin">管理者 新規登録画面</h1>
+  <h1 class="admin_users_new_title">〜管理者 新規登録画面〜</h1>
   <%= form_with model: [:admin, @user] do |f| %>
-    <%= f.label :name %>
-    <%= f.text_field :name, placeholder: "ユーザ名を入力してね！" %>
-    <%= f.label :email %>
-    <%= f.email_field :email, placeholder: "メールアドレスを入力してね！" %>
-    <%= f.label :password %>
-    <%= f.password_field :password, placeholder: "パスワードを入力してね" %>
-    <%= f.label :confirmation %>
-    <%= f.password_field :password, placeholder: "もう一度パスワードを入力してね！" %>
-    <%= f.submit '登録' %>
+    <div class="admin_user_registration_group">
+      <div class="label_common ">
+        <%= f.label :name %>
+        <%= f.text_field :name, placeholder: "ユーザ名を入力してね！" %>  
+      </div>
+      <div class="label_common">
+        <%= f.label :email %>
+        <%= f.email_field :email, placeholder: "メールアドレスを入力してね！" %>
+      </div>
+      <div class="label_common admin_registration_password_wrap">
+        <%= f.label :password %>
+        <%= f.password_field :password, placeholder: "パスワードを入力してね" %>
+      </div>
+      <div class="label_common">
+        <%= f.label :admin %>
+        <%= f.number_field :admin, placeholder: "数字を選択してね" %>   
+      </div>
+    </div>
+    <div class="admin_user_registration_button">  
+      <%= f.submit '登録' %>
+    </div>
   <% end %>
 <div>
