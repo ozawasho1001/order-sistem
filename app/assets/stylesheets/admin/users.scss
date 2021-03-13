@@ -1,3 +1,68 @@
-// Place all the styles related to the admin/users controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// 
+// 管理者のユーザー新規登録ページのscss
+// 
+.admin_users_new_title {
+  text-align: center;
+  margin-top: 5%;
+  color: #337ab7;
+}
+.admin_user_registration_group{
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  margin-top: 5%;
+}
+.admin_user_registration_group .label_common input {
+  margin-left: 15%;
+}
+.admin_user_registration_group .admin_registration_password_wrap input {
+  margin-left: 50px;
+}
+.admin_user_registration_button {
+  text-align: center;
+}
+.admin_user_registration_button input {
+  font-size: 30px;
+}
+// 
+// adminのuser一覧画面のscss
+// 
+table{
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+table tr{
+  border-bottom: solid 1px #eee;
+  cursor: pointer;
+}
+table tr:hover{
+  background-color: #d4f0fd;
+}
+table th,table td{
+  text-align: center;
+  width: 15%;
+  padding: 15px 0;
+}
+// 
+// 管理者のユーザー編集ページのcss
+// 
+.admin_user_edit_group {
+  text-align: center;
+  margin-top: 10%;
+}
+.admin_user_edit_group .admin_user_edit_title {
+  margin-bottom: 5%;
+  color:  #337ab7;
+}
+.admin_user_edit_button {
+  margin-top: 30px;
+}
+.admin_user_edit_button button {
+  font-size: 30px;
+  cursor: pointer;
+}
+.admin_user_edit_label label {
+  margin-right: 5%;
+  font-size: 30px;
+}
