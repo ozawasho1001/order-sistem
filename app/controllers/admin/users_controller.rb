@@ -21,6 +21,14 @@ class Admin::UsersController < ApplicationController
   end
   
   def edit
+    @user = User.find_by(id: params[:id])
+  end
+  
+  def update
+    user = User.find_by(id: params[:id])
+    user.assign_attributes(name: params[:name], email: params[:email])
+    user.save
+    redirect_to ("/admin/users")
   end
   
   def destroy

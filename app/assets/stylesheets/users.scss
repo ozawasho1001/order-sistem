@@ -138,6 +138,12 @@ table tr:hover{
 }
 table th,table td{
   text-align: center;
-  width: 20%;
+  width: 15%;
   padding: 15px 0;
+}
+// 
+// 管理者のユーザー編集ページのcss
+// 
+.admin_user_edit_group {
+  text-align: center;
 }
