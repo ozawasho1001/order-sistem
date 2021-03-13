@@ -1,5 +1,6 @@
 <table>
   <tr>
+    <th>番号</th>
     <th>お名前</th>
     <th>メール</th>
     <th>管理者</th>
@@ -8,11 +9,12 @@
   </tr>
   <% @user.each do |user| %>
     <tr>
+      <td><%= user.id%></td>
       <td><%= user.name %></td>
       <td><%= user.email %></td>
       <td><%= user.admin%></td>
-      <td><%= "編集" %></td>
-      <td><%= "削除" %></td>
+      <td><%= link_to "編集", "/admin/users/#{user.id}/edit" %></td>
+      <td><%= link_to "削除", "/admin/users/#{user.id}" %></td>
     </tr>
   <% end  %>
 </table>

@@ -1,0 +1,14 @@
+<div class="admin_user_edit_group">
+  <h1>ユーザー編集</h1>
+  <div>
+    <%= form_tag("/admin/users/#{@user.id}", method: :PUT ) do %>
+      <textarea name="name"><%= @user.name %></textarea>
+      <textarea name="email"><%= @user.email %></textarea>
+      <textarea name="admin"><%= @user.admin %></textarea>
+      <%= button_tag "更新" %>
+    <% end %>
+  </div>
+  <div>
+    
+  </div>
+</div>

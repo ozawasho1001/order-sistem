@@ -20,6 +20,17 @@ class Admin::UsersController < ApplicationController
     @user = User.all
   end
   
+  def edit
+    @user = User.find_by(id: params[:id])
+  end
+  
+  def update
+    user = User.find_by(id: params[:id])
+    user.assign_attributes(name: params[:name], email: params[:email])
+    user.save
+    redirect_to ("/admin/users")
+  end
+  
   def destroy
     log_out
     redirect_to logout_path, info: "ログアウトしました。"
@@ -35,5 +46,4 @@ class Admin::UsersController < ApplicationController
       redirect_to admin_login_url
     end
   end
-  
 end
