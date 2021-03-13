@@ -32,8 +32,9 @@ class Admin::UsersController < ApplicationController
   end
   
   def destroy
-    log_out
-    redirect_to logout_path, info: "ログアウトしました。"
+    @user = User.find_by(id: params[:id])
+    @user.destroy
+    redirect_to "/admin/users"
   end
 
   private

@@ -14,7 +14,7 @@
       <td><%= user.email %></td>
       <td><%= user.admin%></td>
       <td><%= link_to "編集", "/admin/users/#{user.id}/edit" %></td>
-      <td><%= link_to "削除", "/admin/users/#{user.id}" %></td>
+      <td><%= link_to "削除", "/admin/users/#{user.id}", method: :delete %></td>
     </tr>
   <% end  %>
 </table>
