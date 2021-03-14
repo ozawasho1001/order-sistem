@@ -1,0 +1,25 @@
+<div id="admin_cuisine_edit_group">
+  <h1 class="admin_cuisine_edit_title">〜商品編集〜</h1>
+  <%= form_tag("/admin/cuisines/#{@cuisine.id}", method: :PUT ) do %>
+    <div class="admin_cuisine_edit_label_form_group">
+      <div>
+        <label>name</label>
+        <textarea name="name"><%= @cuisine.name %></textarea>
+      </div>
+      
+      <div>
+        <label>price</label>
+        <textarea name="price"><%= @cuisine.price %></textarea>
+      </div>
+      
+      <div>
+        <label>detail</label>
+        <textarea name="text"><%= @cuisine.text %></textarea>
+      </div>
+    </div>
+    
+    <div class="admin_cuisine_edit_button">
+      <%= button_tag "Up Date" %>
+    </div>
+  <% end %>
+</div>
