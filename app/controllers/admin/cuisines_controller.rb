@@ -21,6 +21,17 @@ class Admin::CuisinesController < ApplicationController
     @cuisines = Cuisine.all
   end
   
+  def edit
+    @cuisine = Cuisine.find_by(id: params[:id])
+  end
+  
+  def update
+    cuisine = Cuisine.find_by(id: params[:id])
+    cuisine.assign_attributes(name: params[:name], price: params[:price], text: params[:text])
+    cuisine.save
+    redirect_to "/admin/cuisines"
+  end
+  
   private
   def cuisine_params
     params.require(:cuisine).permit(:name, :price, :text, :image)

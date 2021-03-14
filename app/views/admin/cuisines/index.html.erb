@@ -11,11 +11,11 @@
       <div>
         <%= cuisine.text  %>
       </div>
-      <div>
+      <div class="cuisine_price">
         <%= cuisine.price  %>
       </div>
       <div class="product_list_edit_delete_wrap">      
-        <%= link_to "編集", "/admin/cuisines" %>
+        <%= link_to "編集", "/admin/cuisines/#{cuisine.id}/edit" %>
         <%= link_to "削除", "/admin/cuisines" %>
       </div>
     </div>
