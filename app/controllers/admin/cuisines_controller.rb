@@ -32,6 +32,12 @@ class Admin::CuisinesController < ApplicationController
     redirect_to "/admin/cuisines"
   end
   
+  def destroy
+    cuisine = Cuisine.find_by(id: params[:id])
+    cuisine.destroy
+    redirect_to "/admin/cuisines"
+  end
+  
   private
   def cuisine_params
     params.require(:cuisine).permit(:name, :price, :text, :image)
