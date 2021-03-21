@@ -6,6 +6,6 @@ class Cuisine < ApplicationRecord
   validates :image, presence: true
   validates :user_id, presence: true
   
-  belongs_to :user
+  has_many :user
   mount_uploader :image, ImageUploader
 end

@@ -4,8 +4,9 @@ Rails.application.routes.draw do
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
-  
   resources :cuisines
+  get "/orders/new", to: "orders#new"
+  post "/order", to: "orders#create"
   
   #管理者
   namespace :admin do

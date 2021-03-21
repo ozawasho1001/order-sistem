@@ -11,7 +11,7 @@ class UsersController < ApplicationController
     else
       flash.now[:danger] = "登録失敗です"
       render :new
-   end
+    end
   end
   
   def index
