@@ -1,0 +1,24 @@
+<div>
+  <div id="product_list">
+    <% @cuisines.each do |cuisine| %>
+      <div class="card">
+        <%= image_tag cuisine.image.url, class: "product_image" %>
+        <div>
+          <%= cuisine.name %>
+        </div>
+        <div>
+          <%= cuisine.text  %>
+        </div>
+        <div class="cuisine_price">
+          <%= cuisine.price  %>
+        </div>
+        
+        <div>
+          <%= link_to order_path(cuisine_id: cuisine.id), method: :post do %>
+            <p>注文する</p>
+          <% end %>
+        </div>  
+      </div>
+    <% end %>
+  </div>
+</div>
