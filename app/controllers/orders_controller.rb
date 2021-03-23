@@ -23,5 +23,4 @@ class OrdersController < ApplicationController
       redirect_to orders_new_path, danger: 'オーダーに失敗しました'
     end
   end
-  
 end
