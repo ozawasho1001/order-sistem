@@ -1,0 +1,7 @@
+<div>
+  <h1>お会計</h1>
+  <%= form_with url: admin_payments_index_path do |t| %>
+    <%= t.text_field :user_id, placeholder: "番号を入力してね" %>
+    <%= t.submit "会計" %>
+  <% end %>
+</div>
