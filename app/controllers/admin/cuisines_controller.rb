@@ -7,8 +7,7 @@ class Admin::CuisinesController < ApplicationController
   end
   
   def create
-    @cuisine = current_user.cuisines.new(cuisine_params)
-    
+  @cuisine = current_user.cuisines.new(cuisine_params)
     if @cuisine.save
       redirect_to admin_cuisines_path, succes: "投稿に成功しました。"
     else

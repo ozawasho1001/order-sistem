@@ -3,7 +3,7 @@ class User < ApplicationRecord
   validates :email, presence: true, uniqueness: { case_sensitive: false }
   has_secure_password
   
-  has_many :cuisines
+  belongs_to :cuisines
   has_many :orders
   enum role: {general: 1, admin: 99}
 end
