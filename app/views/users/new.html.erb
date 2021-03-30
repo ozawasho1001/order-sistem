@@ -1,26 +1,24 @@
-<h1>Sign In</h1>
+<h1>Sign Up</h1>
 <div>
   <%= form_with model: @user do |f| %>
-    <div>
-      <div class="input_label_group">
-        <div>
-          <%= f.label :name %>
-          <%= f.text_field :name, class: "input_common", placeholder: "ユーザ名を入力してね！" %>
-        </div>
-
-        <div>
-          <%= f.label :email, class: "email_label" %>
-          <%= f.email_field :email, class: "input_common", placeholder: "メールアドレスを入力してね！" %>
-        </div>
-
-        <div>
-          <%= f.label :password %>
-          <%= f.password_field :password, placeholder: "パスワードを入力してね！" %>
-        </div>
+    <div class="input_label_group">
+      <div>
+        <%= f.label :name %>
+        <%= f.text_field :name, class: "input_common", placeholder: "ユーザ名を入力してね！" %>
       </div>
-      <div class="user_new_submit">
-        <button type="submit">Sign In</button>
+
+      <div>
+        <%= f.label :email, class: "email_label" %>
+        <%= f.email_field :email, class: "input_common", placeholder: "メールアドレスを入力してね！" %>
       </div>
+
+      <div>
+        <%= f.label :password %>
+        <%= f.password_field :password, placeholder: "パスワードを入力してね！" %>
+      </div>
+    </div>
+    <div class="user_new_submit">
+      <button type="submit">Sign Up</button>
     </div>
   <% end %>
 </div>

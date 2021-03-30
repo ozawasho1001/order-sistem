@@ -1,17 +1,18 @@
+<h1>Sign In</h1>
 <%= form_for :session, url: login_path do |f| %>
-  <div class="user_new_registration">
-    <div class="user_new_label_form_group">
-      <div class="common_label_form_group label_group">    
-        <%= f.label :email %>
-        <%= f.label :password %>
-      </div>
-      <div class="common_label_form_group form-group">
-        <%= f.email_field :email, placeholder: "登録したメールアドレスを入力してね！" %>
-        <%= f.password_field :password, placeholder: "登録したパスワードを入力してね！" %>
-      </div>
+  <div class="input_label_group">
+    <div>
+      <%= f.label :email, class: "email_label" %>
+      <%= f.email_field :email, class: "input_common", placeholder: "登録したメールアドレスを入力してね！" %>
     </div>
-    <div class="user_new_submit">
-      <button type="submit" class="btn">Sign In</button>
+
+    <div>
+      <%= f.label :password %>
+      <%= f.password_field :password, placeholder: "登録したパスワードを入力してね！" %>
     </div>
+
+  </div>
+  <div class="user_new_submit">
+    <button type="submit" class="btn">Sign In</button>
   </div>
 <% end %>
