@@ -1,0 +1,39 @@
+//
+// ユーザのTOPページのcss
+//
+.admin_background_img {
+  background-image: url(visual-01-sp.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90vh;
+  width: 100%;
+}
+.link_group {
+    position: absolute;
+    right: 0;
+    top: 7%;
+}
+.link_group > a {
+  padding: 10px;
+  font-size: 25px;
+  border: 5px solid #0756a7;
+  border-radius: 30px;
+  color: white;
+  text-decoration: none;
+}
+.link_group > a:hover {
+  opacity: 0.5;
+}
+.link_group > a:last-child {
+  margin: 0 40px 0 20px;
+}
+@media (min-width: 335px) and ( max-width: 770px) {
+  .link_group {
+    position: absolute;
+    top: 5%;
+    right: 0;
+  }
+  .link_group > a:last-child {
+    margin: 0 0 0 20px;
+  }
+}

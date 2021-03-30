@@ -15,9 +15,10 @@
 class Order < ApplicationRecord
   validates :cuisine_id, presence: true
   validates :quantity, presence: true
-  validates :cuisine_name, presence: true
+  validates :cuisine_name, presence: true, length: { maximum: 200 }
   validates :cuisine_price, presence: true
-  
+
   has_many :cuisines_orders
+  has_many :cuisines, through: :cuisines_orders
   belongs_to :user
 end

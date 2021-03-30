@@ -15,8 +15,7 @@ class Cuisine < ApplicationRecord
   validates :price, presence: true
   validates :text, presence: true
   validates :image, presence: true
-  validates :user_id, presence: true
-  
+
   has_many :cuisines_orders
   mount_uploader :image, ImageUploader
 end

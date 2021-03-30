@@ -1,10 +1,10 @@
 <div>
-  <h1 class="admin_users_new_title">〜管理者 新規登録画面〜</h1>
+  <h1 class="admin_users_new_title">管理者 新規登録画面</h1>
   <%= form_with model: [:admin, @user] do |f| %>
     <div class="admin_user_registration_group">
       <div class="label_common ">
         <%= f.label :name %>
-        <%= f.text_field :name, placeholder: "ユーザ名を入力してね！" %>  
+        <%= f.text_field :name, placeholder: "ユーザ名を入力してね！" %>
       </div>
       <div class="label_common">
         <%= f.label :email %>
@@ -16,10 +16,10 @@
       </div>
       <div class="label_common">
         <%= f.label :admin %>
-        <%= f.number_field :admin, placeholder: "数字を選択してね" %>   
+        <%= f.number_field :admin, placeholder: "数字を選択してね" %>
       </div>
     </div>
-    <div class="admin_user_registration_button">  
+    <div class="admin_user_registration_button">
       <%= f.submit '登録' %>
     </div>
   <% end %>

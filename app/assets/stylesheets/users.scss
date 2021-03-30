@@ -1,4 +1,4 @@
-// 
+//
 // ユーザーページ全ての共通css
 // front.html.erb のcss
 body {
@@ -25,65 +25,50 @@ body {
 .main_logo_img:hover {
   opacity: 0.5;
 }
-.link_group {
-  font-size: 30px;
-  margin: 40px 40px 0 0;
-}
-.front_common_link {
-  text-decoration: auto;
-  border: 2px solid #337ab7;
-  color: #337ab7;
-  padding: 10px;
-  border-radius: 30px;
-}
-.front_common_link:hover {
-  opacity: 0.5;
-}
-// 
-// ユーザのTOPページのcss
-// 
-.admin_background_img {
-  background-image: url(visual-01-sp.jpg);
-  height: 90vh;
-  width: 100%;
-}
-// 
+//
 // ユーザーの新規登録のページのcss
-// 
-.user_new_registration {
+//
+h1 {
+  text-align: center;
+  margin-top: 5%;
+  color: #337ab7;
+}
+h1::before {
+  content: "〜"
+}
+h1::after {
+  content: "〜"
+}
+.input_label_group {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 5%;
 }
-.user_new_registration .user_new_label_form_group {
-  display: flex;
-  width: 50%;
-  margin-top: 10%;
+.input_label_group div {
+  margin-bottom: 30px;
+  width: calc(100% / 3);
 }
-.user_new_registration .user_new_label_form_group .common_label_form_group {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-}
-.user_new_registration .user_new_label_form_group .label_group {
+.input_label_group div label {
   font-size: 30px;
 }
-.user_new_registration .user_new_label_form_group .form-group > input {
-  height: 30px;
-  margin-bottom: 10px;
-}
-.user_new_registration .user_new_submit .btn {
-  margin-top: 30px;
-  font-size: 30px;
-  background-color: white;
-  border-color: #337AB7;
-  color: #337AB7;
-  border-radius: 30px;
+.input_label_group div input {
+  width: 50%;
   padding: 10px;
-  border-width: thick;
+  margin-left: 30px;
 }
-.user_new_registration .user_new_submit .btn:hover {
-  opacity: 0.5;
+.email_label {
+  padding-right: 8px;
+}
+.input_label_group div .input_common {
+  margin-left: 18%;
+}
+.user_new_submit {
+  text-align: center;
+}
+.user_new_submit button {
+  padding: 10px;
+  font-size: 20px;
 }
 .alert {
   margin-bottom: 0px;
@@ -94,4 +79,48 @@ body {
   left: 45%;
   color: #337ab7;
   font-size: 20px;
+}
+//
+// タブレット
+//
+@media screen and (max-width: 1300px) {
+  h1 {
+    margin-top: 15%;
+  }
+  .input_label_group {
+    margin-top: 15%;
+  }
+  .input_label_group div .input_common {
+    margin: 0;
+  }
+  .input_label_group div input {
+    margin: 0;
+    width: 100%;
+    padding: 10px;
+  }
+}
+//
+// スマホ
+//
+@media screen and (max-width: 378px) {
+  h1 {
+    margin-top: 20%;
+  }
+  .input_label_group {
+    margin-top: 20%;
+  }
+  .input_label_group div {
+    width: calc(100% / 2);
+  }
+}
+//
+//ディスプレイ
+//
+@media screen and (min-width: 1300px) {
+  .input_label_group div input {
+    margin-left: 20px;
+  }
+  .input_label_group div .input_common {
+    margin-left: 80px;
+  }
 }

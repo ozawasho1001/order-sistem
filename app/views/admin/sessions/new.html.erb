@@ -1,11 +1,11 @@
-<h1 class="admin_login_title">〜管理者 Log In〜</h1>
+<h1 class="admin_login_title">管理者 Log In</h1>
 <div id="admin_login">
   <%= form_for :session, url: admin_administrator_login_path  do |f| %>
     <div class="admin_login_email_group">
       <%= f.label :email%>
       <%= f.email_field :email, placeholder: "メールアドレスを入力してね！" %>
     </div>
-    
+
     <div class="admin_login_password_group">
       <%= f.label :password %>
       <%= f.password_field :password, placeholder: "パスワードを入力してね！" %>

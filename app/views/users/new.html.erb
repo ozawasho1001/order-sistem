@@ -1,22 +1,26 @@
-<%= form_with model: @user do |f| %>
-  <div class="user_new_registration">
-    <div class="user_new_label_form_group">
-      <div class="common_label_form_group label_group">    
-        <%= f.label :name %>
-        <%= f.label :email %>
-        <%= f.label :password %>
-        <%= f.label :confirmation %>
-      </div>
-      <div class="common_label_form_group form-group">
-        <%= f.text_field :name, placeholder: "ユーザ名を入力してね！" %>
-        <%= f.email_field :email, placeholder: "メールアドレスを入力してね！" %>
-        <%= f.password_field :password, placeholder: "パスワードを入力してね！" %>
-        <%= f.password_field :password, placeholder: "もう一度パスワードを入力してね！" %>
-      </div>
-    </div>
-    <div class="user_new_submit">
-      <button type="submit" class="btn">Sign Up</button>
-    </div>
-  </div>
-<% end %>
+<h1>Sign In</h1>
+<div>
+  <%= form_with model: @user do |f| %>
+    <div>
+      <div class="input_label_group">
+        <div>
+          <%= f.label :name %>
+          <%= f.text_field :name, class: "input_common", placeholder: "ユーザ名を入力してね！" %>
+        </div>
 
+        <div>
+          <%= f.label :email, class: "email_label" %>
+          <%= f.email_field :email, class: "input_common", placeholder: "メールアドレスを入力してね！" %>
+        </div>
+
+        <div>
+          <%= f.label :password %>
+          <%= f.password_field :password, placeholder: "パスワードを入力してね！" %>
+        </div>
+      </div>
+      <div class="user_new_submit">
+        <button type="submit">Sign In</button>
+      </div>
+    </div>
+  <% end %>
+</div>

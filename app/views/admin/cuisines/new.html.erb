@@ -1,29 +1,51 @@
 <div class="product_registration_tag">
-  <%= link_to "商品一覧", "/admin/cuisines" %>  
+  <%= link_to "商品一覧", "/admin/cuisines" %>
 </div>
+
 <div>
   <h1 class="product_registration_title">〜商品登録〜</h1>
-  <%= form_with model: [:admin, @cuisine] do |f| %>
-    <div class="product_registration_group">
-      <div class="label_common">
-        <%= f.label :name %>
-        <%= f.text_field :name, placeholder: "商品名を入力してね！" %>
+
+  <%= form_with model: [:admin, @cuisine], local: true do |f| %>
+    <div class="product_registration_group <%= @cuisine.errors.key?(:name) ? 'has-error' : '' %>">
+      <div class="input-container">
+        <div class="label_common">
+          <%= f.label :name %>
+          <%= f.text_field :name, placeholder: "商品名を入力してね！" %>
+        </div>
+
+        <% if @cuisine.errors.key?(:name) %>
+          <div class="error">
+            <p><%= @cuisine.errors.full_messages_for(:name).first %></p>
+          </div>
+        <% end %>
       </div>
+
       <div class="label_common">
         <%= f.label :price %>
         <%= f.text_field :price, placeholder: "値段を入力してね！" %>
       </div>
+
       <div class="label_common">
         <%= f.label :detail %>
         <%= f.text_area :text, placeholder: "商品の詳細を入力してね！" %>
       </div>
+
       <div class="label_common">
         <%= f.label :img %>
         <%= f.file_field :image %>
       </div>
     </div>
+
     <div class="product_common_group product_registration_botton">
       <%= f.submit '登録' %>
     </div>
   <% end %>
+  <style>
+  .has-error {
+    border-color: red;
+  }
+  .error p {
+    color: red;
+  }
+  </style>
 </div>
