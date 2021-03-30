@@ -1,7 +1,6 @@
 class UsersController < ApplicationController
-  layout "front"
   def new
-   @user = User.new
+    @user = User.new
   end
 
   def create

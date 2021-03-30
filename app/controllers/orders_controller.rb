@@ -1,6 +1,4 @@
 class OrdersController < ApplicationController
-  layout "front"
-
   def new
     @cuisines = Cuisine.all
   end
