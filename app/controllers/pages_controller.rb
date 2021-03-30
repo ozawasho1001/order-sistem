@@ -1,6 +1,10 @@
 class PagesController < ApplicationController
-  layout "front"
-  
   def index
+  end
+
+  private
+
+  def should_show_footer?
+    false
   end
 end

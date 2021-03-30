@@ -1,6 +1,4 @@
 class SessionsController < ApplicationController
-  layout "front"
-
   def new
   end
 
