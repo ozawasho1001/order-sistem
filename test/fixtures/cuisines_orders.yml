@@ -1,0 +1,23 @@
+# == Schema Information
+#
+# Table name: cuisines_orders
+#
+#  id          :bigint           not null, primary key
+#  orders_id   :bigint           not null
+#  cuisines_id :bigint           not null
+#
+# Indexes
+#
+#  index_cuisines_orders_on_cuisines_id  (cuisines_id)
+#  index_cuisines_orders_on_orders_id    (orders_id)
+#
+
+# This model initially had no columns defined. If you add columns to the
+# model remove the '{}' from the fixture names and add the columns immediately
+# below each fixture, per the syntax in the comments below
+#
+one: {}
+# column: value
+#
+two: {}
+# column: value
