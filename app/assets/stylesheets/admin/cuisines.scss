@@ -1,6 +1,6 @@
-//
-// 管理者の商品の登録ページのscss
-// 
+/**
+*管理者の商品の登録ページのscss
+*/
 .product_registration_title {
   width: 50%;
   margin: 5% auto 0 auto;
@@ -50,35 +50,58 @@
   text-decoration: auto;
   border-radius: 30px;
 }
-// 
+//
 // 管理者の商品一覧ページのscss
-// 
+//
 #product_list {
   display: flex;
   flex-wrap: wrap;
   margin: 0 5%;
 }
-.card {
+#product_list .card {
+  position: relative;
+  width: 300px;
   margin: 5% 10px 0 10px;
-  border: 2px solid;
+  border: 1px solid darkgray;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.product_image {
+#product_list .card .image {
+  object-fit: cover;
   width: 300px;
   height: 250px;
 }
-.product_list_edit_delete_wrap a {
-  border: 2px solid;
+#product_list .card .content {
+  width: 100%;
+  margin-bottom: 25%;
+  text-align: center;
 }
-.cuisine_price::before {
+#product_list .card .content .name {
+  letter-spacing: 1rem;
+  font-weight: bold;
+  padding: 10px 0;
+  border-bottom: 1px solid darkgray;
+  margin: 0 15px;
+}
+#product_list .card .content .detail {
+  font-size: 0.9rem;
+  color: #333;
+}
+#product_list .card .footer {
+  position: absolute;
+  bottom: 0;
+}
+#product_list .card .footer .price::before {
   content: "¥";
 }
-// 
-// 管理者の商品の編集ページのcss
-// 
+#product_list .card .footer .button form input {
+  padding: 10px;
+}
+/**
+* 管理者の商品の編集ページのcss
+*/
 #admin_cuisine_edit_group {
   text-align: center;
 }
