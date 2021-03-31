@@ -2,6 +2,7 @@
 // ユーザーページ全ての共通css
 // front.html.erb のcss
 body {
+  word-break: break-all;
   margin: 0;
   min-height: calc(100% - (123px - 66px));
 }
