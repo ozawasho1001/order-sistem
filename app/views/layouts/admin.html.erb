@@ -13,6 +13,8 @@
     <% flash.each do |key, value| %>
       <div class="alert alert-<%= key %>" role="alert"><%= value %></div>
     <% end %>
+
+    <header>
       <div class="link_wrapper">
         <div class="main_logo_group">
           <a href="/admin/topics">
@@ -21,16 +23,20 @@
           <p>- Cherish deliciousness</p>
         </div>
       </div>
+    </header>
+
+    <div class="main-content">
+      <%= yield %>
+
+      <script>
+        $(function(){
+          $(".alert").fadeOut(5000);
+        });
+      </script>
+    </div>
+
     <footer>
-      <div>
-        <p>(C) 2021 Self Order System.</p>
-      </div>
+      <p>(C) 2021 Self Order System.</p>
     </footer>
-    <%= yield %>
-    <script>
-      $(function(){
-        $(".alert").fadeOut(5000);
-      });
-    </script>
   </body>
 </html>
