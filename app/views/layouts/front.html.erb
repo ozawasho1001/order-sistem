@@ -19,7 +19,7 @@
       <div class="link_wrapper">
         <div class="main_logo_group">
           <a href="/">
-            <%= image_tag "main-logo", class: "main_logo_img" %>
+            <%= image_tag "logo.png", class: "main_logo_img" %>
           </a>
           <p>- Cherish deliciousness</p>
         </div>
@@ -27,6 +27,7 @@
         <div class="link_group">
           <% if logged_in? %>
             <%= link_to "Sign Out", "/logout", method: :delete, class: "front_common_link" %>
+            <%= link_to "Order","/orders/new" %>
           <% else %>
             <%= link_to "Sign UP","/users/new" %>
             <%= link_to "Sign In", "/login" %>
@@ -47,7 +48,7 @@
 
     <% if should_show_footer? %>
       <footer>
-        ここフッターの領域な
+        <p>(C) 2021 Self Order System.</p>
       </footer>
     <% end %>
   </body>
