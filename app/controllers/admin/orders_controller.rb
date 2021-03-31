@@ -1,7 +1,6 @@
-class Admin::OrdersController < ApplicationController
+class  Admin::OrdersController < Admin::BaseController
   before_action :require_permission
-  layout "admin"
-  
+
   def index
     @order = Order.all
   end

@@ -1,8 +1,7 @@
-class Admin::TopicsController < ApplicationController
+class  Admin::TopicsController < Admin::BaseController
   before_action :require_permission
-  layout "admin"
-  
+
   def index
   end
-  
+
 end
