@@ -1,6 +1,5 @@
-class Admin::CuisinesController < ApplicationController
+class  Admin::CuisinesController < Admin::BaseController
   before_action :require_permission
-  layout "admin"
 
   def new
     @cuisine = Cuisine.new
