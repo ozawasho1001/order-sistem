@@ -1,26 +1,28 @@
-<div>
-  <h1 class="admin_users_new_title">管理者 新規登録画面</h1>
-  <%= form_with model: [:admin, @user] do |f| %>
-    <div class="admin_user_registration_group">
-      <div class="label_common ">
-        <%= f.label :name %>
-        <%= f.text_field :name, placeholder: "ユーザ名を入力してね！" %>
-      </div>
-      <div class="label_common">
-        <%= f.label :email %>
-        <%= f.email_field :email, placeholder: "メールアドレスを入力してね！" %>
-      </div>
-      <div class="label_common admin_registration_password_wrap">
-        <%= f.label :password %>
-        <%= f.password_field :password, placeholder: "パスワードを入力してね" %>
-      </div>
-      <div class="label_common">
-        <%= f.label :admin %>
-        <%= f.number_field :admin, placeholder: "数字を選択してね" %>
-      </div>
+<h1>管理者 新規登録画面</h1>
+<%= form_with model: [:admin, @user] do |f| %>
+  <div class="input_label_group">
+    <div>
+      <%= f.label :name %>
+      <%= f.text_field :name, class: "input_common", placeholder: "ユーザ名を入力してね！" %>
     </div>
-    <div class="admin_user_registration_button">
-      <%= f.submit '登録' %>
+
+    <div>
+      <%= f.label :email, class:"email_label" %>
+      <%= f.email_field :email, class: "input_common", placeholder: "メールアドレスを入力してね！" %>
     </div>
-  <% end %>
-<div>
+
+    <div>
+      <%= f.label :password %>
+      <%= f.password_field :password, placeholder: "パスワードを入力してね" %>
+    </div>
+
+    <div>
+      <%= f.label :admin %>
+      <%= f.number_field :admin, class: "number", placeholder: "数字を選択してね" %>
+    </div>
+  </div>
+
+  <div class="submit">
+    <button type="submit">Sign Up</button>
+  </div>
+<% end %>
