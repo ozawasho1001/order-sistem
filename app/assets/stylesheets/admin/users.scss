@@ -1,32 +1,19 @@
-// 
+//
 // 管理者のユーザー新規登録ページのscss
-// 
-.admin_users_new_title {
-  text-align: center;
-  margin-top: 5%;
-  color: #337ab7;
+//
+.input_label_group div .number {
+  width: 120px;
+  margin-left: 70px;
 }
-.admin_user_registration_group{
-  width: 50%;
-  margin: auto;
-  text-align: center;
-  margin-top: 5%;
+@media screen and (max-width: 1300px) {
+  .input_label_group div .number {
+    width: 100%;
+    margin-left: 0;
+  }
 }
-.admin_user_registration_group .label_common input {
-  margin-left: 15%;
-}
-.admin_user_registration_group .admin_registration_password_wrap input {
-  margin-left: 50px;
-}
-.admin_user_registration_button {
-  text-align: center;
-}
-.admin_user_registration_button input {
-  font-size: 30px;
-}
-// 
+//
 // adminのuser一覧画面のscss
-// 
+//
 table{
   border-collapse: collapse;
   border-spacing: 0;
@@ -44,9 +31,9 @@ table th,table td{
   width: 15%;
   padding: 15px 0;
 }
-// 
+//
 // 管理者のユーザー編集ページのcss
-// 
+//
 .admin_user_edit_group {
   text-align: center;
   margin-top: 10%;
