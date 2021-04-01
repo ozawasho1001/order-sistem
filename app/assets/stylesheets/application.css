@@ -4,6 +4,102 @@
 */
 @import "bootstrap-sprocketes";
 @import "bootstrap";
+/**
+* ユーザーページ全ての共通css
+* front.html.erb のcss
+* 共通のcss
+*/
 body {
+  word-break: break-all;
+  margin: 0;
+  min-height: calc(100% - (123px - 66px));
   position: relative;
+}
+.link_wrapper {
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+}
+.link_wrapper .main_logo_group {
+  display: flex;
+  align-items: center;
+}
+.link_wrapper .main_logo_group > p {
+  font-size: 25px;
+  color: white;
+  font-weight: bold;
+  font-family: serif;
+}
+.main_logo_img {
+  margin-left: 40px;
+}
+.main_logo_img:hover {
+  opacity: 0.5;
+}
+.main-content {
+  height: auto;
+}
+footer {
+  background-color: black;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  margin: 30px 0 0 0;
+}
+footer > p {
+  color: white;
+}
+h1 {
+  text-align: center;
+  margin-top: 5%;
+  color: #337ab7;
+}
+h1::before {
+  content: "〜"
+}
+h1::after {
+  content: "〜"
+}
+.input_label_group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5%;
+}
+.submit {
+  text-align: center;
+}.input_label_group div {
+  margin-bottom: 30px;
+  width: calc(100% / 3);
+}
+.input_label_group div label {
+  font-size: 30px;
+}
+.input_label_group div input {
+  width: 50%;
+  padding: 10px;
+  margin-left: 30px;
+}
+.input_label_group div .email_label {
+  padding-right: 5px;
+}
+.input_label_group div .input_common {
+  margin-left: 18%;
+}
+.submit button {
+  padding: 10px;
+  font-size: 20px;
+}
+.alert {
+  margin-bottom: 0px;
+  position: fixed;
+  width: 100%;
+  z-index: 10000;
+  top: 5%;
+  left: 45%;
+  color: #337ab7;
+  font-size: 20px;
+}
+.alert-danger {
+  color: red;
 }
