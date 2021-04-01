@@ -3,7 +3,7 @@
     <th>番号</th>
     <th>お名前</th>
     <th>メール</th>
-    <th>管理者</th>
+    <th>アクター</th>
     <th>編集</th>
     <th>削除</th>
   </tr>
@@ -12,7 +12,9 @@
       <td><%= user.id%></td>
       <td><%= user.name %></td>
       <td><%= user.email %></td>
-      <td><%= user.admin%></td>
+      <td>
+        <%= user.admin ? "管理者" : "一般" %>
+      </td>
       <td><%= link_to "編集", "/admin/users/#{user.id}/edit" %></td>
       <td><%= link_to "削除", "/admin/users/#{user.id}", method: :delete %></td>
     </tr>
