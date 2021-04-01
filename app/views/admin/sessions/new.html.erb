@@ -1,17 +1,19 @@
-<h1>管理者 Log In</h1>
-<div id="admin_login">
+<h1>管理者 Sign In</h1>
   <%= form_for :session, url: admin_administrator_login_path  do |f| %>
-    <div class="admin_login_email_group">
-      <%= f.label :email%>
-      <%= f.email_field :email, placeholder: "メールアドレスを入力してね！" %>
-    </div>
+    <div class="input_label_group">
+      <div>
+        <%= f.label :email, class: "email_label"%>
+        <%= f.email_field :email, class: "input_common", placeholder: "メールアドレスを入力してね！" %>
+      </div>
 
-    <div class="admin_login_password_group">
-      <%= f.label :password %>
-      <%= f.password_field :password, placeholder: "パスワードを入力してね！" %>
-    </div>
-    <div class="admin_log_in_button" >
-      <%= button_to "ログイン" %>
+      <div>
+        <%= f.label :password %>
+        <%= f.password_field :password, placeholder: "パスワードを入力してね！" %>
+      </div>
+
+      <div class="submit" >
+        <button type="submit" class="btn">Sign In</button>
+      </div>
     </div>
   <% end %>
 </div>
