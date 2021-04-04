@@ -8,6 +8,7 @@ class  Admin::CuisinesController < Admin::BaseController
   def create
     @cuisine = Cuisine.new(cuisine_params)
     if @cuisine.save
+      # .to_json で登録後にjsonのフォーマットでログに表示している。
       Rails.logger.debug "cuisine を登録しました。#{@cuisine.to_json}"
       redirect_to admin_cuisines_path, succes: "投稿に成功しました。"
     else

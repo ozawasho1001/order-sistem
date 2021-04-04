@@ -15,5 +15,4 @@ class User < ApplicationRecord
   has_secure_password
 
   has_many :orders
-  enum role: {general: 1, admin: 99}
 end
