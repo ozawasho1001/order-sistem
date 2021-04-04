@@ -1,48 +1,12 @@
 /**
-*管理者の商品の登録ページのscss
+*管理者の商品登録ページのscss
 */
-.product_registration_title {
-  width: 50%;
-  margin: 5% auto 0 auto;
-  text-align: center;
-  color: #337ab7;
-  font-weight: bold;
-}
-.product_registration_group {
-  width: 50%;
-  margin: 5% auto 0 auto;
-  text-align: center;
-}
-.label_common {
-  margin-bottom: 30px;
-}
-.label_common label {
-  font-size: 30px;
-}
-.label_common input {
-  width: 50%;
-  height: 30px;
-  margin-left: 40px;
-}
-.label_common textarea {
-  height: 30px;
-  width: 50%;
-  margin-left: 30px;
-}
-.product_registration_botton {
-  width: 20%;
-  margin: auto;
-  text-align: center;
-}
-.product_registration_botton input {
-  font-size: 30px;
-}
-.product_registration_tag {
+.cuisine {
   position: absolute;
   right: 6%;
   top: 30px;
 }
-.product_registration_tag a {
+.cuisine a {
   font-size: 30px;
   padding: 10px;
   border: 2px solid #337ab7;
@@ -50,6 +14,78 @@
   text-decoration: auto;
   border-radius: 30px;
 }
+
+.wrap .container_group {
+  width: 50%;
+  margin: 5% auto;
+  text-align: center;
+}
+.wrap .container_group .container {
+  margin-bottom: 5%;
+}
+.wrap .container_group .container .cohesive {
+  display: flex;
+  justify-content: center;
+}
+.wrap .container_group .container .cohesive .siz_adj {
+  padding: 15px 10px 5px 10px;
+}
+.wrap .container_group .container .cohesive .adj {
+  padding-right: 10px;
+}
+.wrap .container_group .container .cohesive label {
+  font-size: 30px;
+  width: 20%;
+}
+.wrap .container_group .container .cohesive input {
+  padding: 10px;
+}
+.wrap .container_group .container .cohesive .img_adj {
+  width: 30%;
+  text-align: end;
+  margin-right: 30px;
+}
+.wrap .container_group .container .wid_adj .field_with_errors {
+  margin-right: 100px;
+}
+.field_with_errors {
+  width: 20%;
+}
+/** 管理者の商品登録ページのcss
+* ウィンドウがタブレットサイズの時のcss
+*/
+@media screen and (max-width: 769px) {
+  .wrap .container_group .container .cohesive {
+    flex-direction: column;
+  }
+  .wrap .container_group .container .cohesive label {
+    width: 100%;
+    text-align: left;
+  }
+  .wrap .container_group .container .cohesive .img_adj {
+    text-align: left;
+  }
+  .wrap .container_group .container .cohesive .field_with_errors {
+    width: 100%;
+    text-align: left;
+  }
+  .wrap .container_group .container .cohesive .field_with_errors input {
+    width: 100%;
+  }
+  .wrap .container_group .container .cohesive .field_with_errors textarea {
+    width: 100%;
+  }
+}
+/**
+* 管理者の商品登録ページのcss
+* ウィンドウのサイズがスマホサイズの時のcss
+**/
+@media screen and (max-width: 376px) {
+  .link_wrapper .main_logo_group > p {
+    display: none;
+  }
+}
+
 //
 // 管理者の商品一覧ページのscss
 //
