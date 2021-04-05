@@ -159,21 +159,31 @@
 /**
 * 管理者の商品の編集ページのcss
 */
-#admin_cuisine_edit_group {
+.group .container {
   text-align: center;
+  margin: 3%;
 }
-#admin_cuisine_edit_group .admin_cuisine_edit_title {
-  color: #337ab7;
-  margin: 5% 0;
-}
-.admin_cuisine_edit_label_form_group div {
-  margin-bottom: 30px;
-}
-.admin_cuisine_edit_label_form_group div label {
+.group .container label {
   font-size: 30px;
-  margin-right: 5%;
+  margin-right: 3%;
 }
-.admin_cuisine_edit_button button {
-  font-size: 30px;
+.group .container textarea {
+  padding: 10px;
+  width: 15%;
+  font-size: 15px;
+  font-weight: bold;
+}
+.group .fix label {
+  padding-right: 5px;
+}
+.submit button {
   cursor: pointer;
+}
+@media screen and (max-width: 769px) {
+  .group .container label {
+    display: block;
+  }
+  .group .container textarea {
+    width: 50%;
+  }
 }
