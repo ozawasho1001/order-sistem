@@ -51,6 +51,11 @@
 .field_with_errors {
   width: 20%;
 }
+.submit input {
+  cursor: pointer;
+  padding: 10px 15px;
+  font-size: 20px;
+}
 /** 管理者の商品登録ページのcss
 * ウィンドウがタブレットサイズの時のcss
 */
@@ -85,10 +90,10 @@
     display: none;
   }
 }
-
-//
-// 管理者の商品一覧ページのscss
-//
+/**
+* 管理者の商品一覧ページのscss
+* ユーザーのオーダーページと共通css
+*/
 #product_list {
   display: flex;
   flex-wrap: wrap;
@@ -97,7 +102,7 @@
 #product_list .card {
   position: relative;
   width: 300px;
-  margin: 5% 10px 0 10px;
+  margin: 5% auto;
   border: 1px solid darkgray;
   border-radius: 5px;
   display: flex;
@@ -111,7 +116,7 @@
 }
 #product_list .card .content {
   width: 100%;
-  margin-bottom: 25%;
+  margin-bottom: 30%;
   text-align: center;
 }
 #product_list .card .content .name {
@@ -129,11 +134,27 @@
   position: absolute;
   bottom: 0;
 }
+#product_list .card .footer .price {
+  text-align: center;
+}
 #product_list .card .footer .price::before {
   content: "¥";
+  font-weight: bold;
 }
 #product_list .card .footer .button form input {
   padding: 10px;
+}
+#product_list .card .footer a {
+  border: 1px solid;
+  font-weight: bold;
+  font-size: 20px;
+}
+#product_list .card .footer .edit {
+  margin-right: 10px;
+  color: green;
+}
+#product_list .card .footer a:last-child {
+  color: red;
 }
 /**
 * 管理者の商品の編集ページのcss
