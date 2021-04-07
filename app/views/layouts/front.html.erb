@@ -26,11 +26,11 @@
 
         <div class="link_group">
           <% if logged_in? %>
-            <%= link_to "Sign Out", "/logout", method: :delete, class: "front_common_link" %>
+            <%= link_to "Sign out", "/logout", method: :delete, class: "front_common_link" %>
             <%= link_to "Order","/orders/new" %>
           <% else %>
-            <%= link_to "Sign UP","/users/new" %>
-            <%= link_to "Sign In", "/login" %>
+            <%= link_to "Sign up","/users/new" %>
+            <%= link_to "Sign in", "/login" %>
           <% end %>
         </div>
       </div>

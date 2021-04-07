@@ -15,8 +15,14 @@
       <td>
         <%= user.admin ? "管理者" : "一般" %>
       </td>
-      <td><%= link_to "編集", "/admin/users/#{user.id}/edit" %></td>
-      <td><%= link_to "削除", "/admin/users/#{user.id}", method: :delete %></td>
+      <td><%= link_to "編集", "/admin/users/#{user.id}/edit", class: "edit" %></td>
+      <td>
+        <%= link_to "削除",
+          "/admin/users/#{user.id}",
+          method: :delete,
+          'data-confirm' => '本当にアカウントを削除しても良いですか？',
+          class: "delete" %>
+      </td>
     </tr>
   <% end  %>
 </table>

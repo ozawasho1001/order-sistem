@@ -21,7 +21,6 @@ table{
 }
 table tr{
   border-bottom: solid 1px #eee;
-  cursor: pointer;
 }
 table tr:hover{
   background-color: #d4f0fd;
@@ -31,25 +30,36 @@ table th,table td{
   width: 15%;
   padding: 15px 0;
 }
+td .edit {
+  text-decoration: none;
+  color: green;
+  cursor: pointer;
+  border: 1px solid green;
+  padding: 10px;
+}
+td .edit:hover {
+  background-color: silver;
+}
+td .delete {
+  text-decoration: none;
+  color: red;
+  cursor: pointer;
+  border: 1px solid red;
+  padding: 10px;
+}
+td .delete:hover {
+  background-color: silver;
+}
 //
 // 管理者のユーザー編集ページのcss
 //
-.admin_user_edit_group {
+.input_label_group .set {
   text-align: center;
-  margin-top: 10%;
-}
-.admin_user_edit_group .admin_user_edit_title {
-  margin-bottom: 5%;
-  color:  #337ab7;
-}
-.admin_user_edit_button {
-  margin-top: 30px;
-}
-.admin_user_edit_button button {
-  font-size: 30px;
-  cursor: pointer;
-}
-.admin_user_edit_label label {
-  margin-right: 5%;
-  font-size: 30px;
+
+  label {
+    margin-right: 30px;
+  }
+  textarea {
+    padding: 10px;
+  }
 }
