@@ -1,25 +1,19 @@
-<div class="admin_user_edit_group">
-  <h1 class="admin_user_edit_title">〜ユーザー編集〜</h1>
-  <div>
-    <%= form_tag("/admin/users/#{@user.id}", method: :PUT ) do %>
-      <div>
-        <div class="admin_user_edit_label">
-          <label>name</label>
-          <textarea name="name"><%= @user.name %></textarea>
-        </div>
-        
-        <div class="admin_user_edit_label">
-          <label>email</label>
-          <textarea name="email"><%= @user.email %></textarea>
-        </div>
-        
-        <div class="admin_user_edit_button">
-          <%= button_tag "Up Date" %>
-        </div>
+<h1>ユーザー編集</h1>
+  <%= form_tag("/admin/users/#{@user.id}", method: :PUT ) do %>
+    <div class="input_label_group">
+      <div class="set">
+        <label>name</label>
+        <textarea name="name"><%= @user.name %></textarea>
       </div>
-    <% end %>
-  </div>
-  <div>
-    
-  </div>
+
+      <div class="set">
+        <label>email</label>
+        <textarea name="email"><%= @user.email %></textarea>
+      </div>
+    </div>
+
+    <div class="submit">
+      <%= button_tag "Up date" %>
+    </div>
+  <% end %>
 </div>
