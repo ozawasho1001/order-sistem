@@ -56,7 +56,7 @@ class OrdersController < ApplicationController
     # order をsave させる。
     if order.save
       # save できたら、リダイレクトさせる。
-      redirect_to '/orders/new', success: '商品をオーダーしました'
+      redirect_to new_order_path, success: '商品をオーダーしました'
     else
       redirect_to new_order_path, danger: 'オーダーに失敗しました'
     end
@@ -68,4 +68,3 @@ class OrdersController < ApplicationController
     params[:id]
   end
 end
-
