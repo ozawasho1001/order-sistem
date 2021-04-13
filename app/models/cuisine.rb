@@ -16,6 +16,7 @@ class Cuisine < ApplicationRecord
   validates :text, presence: true
   validates :image, presence: true
 
-  has_many :cuisines_orders
+  # has_many :cuisines_orders
+  has_and_belongs_to_many :orders
   mount_uploader :image, ImageUploader
 end

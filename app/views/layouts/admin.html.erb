@@ -19,12 +19,37 @@
     <header>
       <div class="link_wrapper">
         <div class="main_logo_group">
-          <a href="/admin/topics">
+          <a href="/admin/orders">
             <%= image_tag "logo.png", class: "main_logo_img" %>
           </a>
           <p>- Cherish deliciousness</p>
         </div>
       </div>
+      <% if logged_in? %>
+        <div id="topics_link_group">
+          <div>
+            <%= link_to "Order", admin_orders_path %>
+          </div>
+
+          <div>
+            <% if current_user && current_user.admin %>
+              <%= link_to "Admin registration","/admin/users/new" %>
+            <% end %>
+          </div>
+
+          <div>
+            <%= link_to "Users", "/admin/users" %>
+          </div>
+
+          <div>
+            <%= link_to "Cuisines", "/admin/cuisines" %>
+          </div>
+
+          <div>
+            <%= link_to "Sign out", "/admin/logout", method: :delete %>
+          </div>
+        </div>
+      <% end %>
     </header>
 
     <div class="main-content">

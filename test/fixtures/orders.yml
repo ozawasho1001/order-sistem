@@ -4,13 +4,20 @@
 #
 #  id            :bigint           not null, primary key
 #  payment_id    :integer
-#  cuisine_id    :integer
+#  user_id       :bigint           not null
 #  quantity      :integer
 #  cuisine_name  :string(255)
 #  cuisine_price :integer
 #  created_at    :datetime         not null
 #  updated_at    :datetime         not null
-#  user_id       :integer
+#
+# Indexes
+#
+#  index_orders_on_user_id  (user_id)
+#
+# Foreign Keys
+#
+#  fk_rails_...  (user_id => users.id)
 #
 
 # This model initially had no columns defined. If you add columns to the

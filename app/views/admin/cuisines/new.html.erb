@@ -1,9 +1,9 @@
 <div class="cuisine">
-  <%= link_to "商品一覧", "/admin/cuisines" %>
+  <%= link_to "Cuisine list", "/admin/cuisines" %>
 </div>
 
 <div class="wrap">
-  <h1>商品登録</h1>
+  <h1>Cuisine new</h1>
 
   <%= form_with model: [:admin, @cuisine], local: true do |f| %>
     <div class="container_group">
@@ -11,7 +11,7 @@
       <div class="container <%= @cuisine.errors.key?(:name) ? "has-error" : "" %>">
         <div class="cohesive">
           <%= f.label :name %>
-          <%= f.text_field :name, class: "input_common", placeholder: "商品名を入力してね！" %>
+          <%= f.text_area :name, class: "input_common", placeholder: "商品名を入力してね！" %>
         </div>
 
         <% if @cuisine.errors.key?(:name) %>
@@ -23,8 +23,8 @@
 
       <div class="container <%= @cuisine.errors.key?(:price) ? "has-error" : "" %>">
         <div class="cohesive">
-          <%= f.label :price, class: "adj" %>
-          <%= f.number_field :price, class: "input_common" , placeholder: "値段を入力してね！" %>
+          <%= f.label :price %>
+          <%= f.number_field :price, class: "input_common" , placeholder: "値段を入力してね！", min: "0", max: "10000" %>
         </div>
 
         <% if @cuisine.errors.key?(:price) %>
@@ -36,8 +36,8 @@
 
       <div class="container <%= @cuisine.errors.key?(:text) ? "has-error" : "" %>">
         <div class="cohesive">
-          <%= f.label :detail, class: "adj" %>
-          <%= f.text_area :text, class: "input_common siz_adj", placeholder: "商品の詳細を入力してね！" %>
+          <%= f.label :detail %>
+          <%= f.text_area :text, class: "input_common", placeholder: "商品の詳細を入力してね！" %>
         </div>
 
         <% if @cuisine.errors.key?(:text) %>
@@ -48,9 +48,12 @@
       </div>
 
       <div class="container <%= @cuisine.errors.key?(:image) ? "has-error" : "" %>">
-        <div class="cohesive wid_adj">
-          <%= f.label :img, class: "img_adj" %>
-          <%= f.file_field :image, class: "input_common" %>
+        <div class="cohesive">
+          <div id="app">
+            <label>
+              <%= f.file_field :image, class: "input_common", accept: "image/jpeg, image/png" %>+
+            </label>
+          </div>
         </div>
 
         <% if @cuisine.errors.key?(:image) %>
@@ -67,10 +70,10 @@
   <% end %>
   <style>
   .has-error {
-    border-color: red;
+    border-color: #FF3366;
   }
   .error p {
-    color: red;
+    color: #FF3366;
   }
   </style>
 </div>
