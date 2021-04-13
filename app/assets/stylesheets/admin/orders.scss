@@ -1,3 +1,10 @@
-// Place all the styles related to the admin/orders controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+table tbody tr td a {
+  text-decoration: none;
+  color: #FF3366;
+  cursor: pointer;
+  border: 1px solid #FF3366;
+  padding: 10px;
+}
+table tbody tr td a:hover {
+  background-color: silver;
+}
