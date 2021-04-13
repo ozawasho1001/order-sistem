@@ -1,5 +1,5 @@
 <div class="cuisine">
-  <%= link_to "商品登録", "/admin/cuisines/new" %>
+  <%= link_to "Cuisine new", "/admin/cuisines/new" %>
 </div>
 
 <div id="product_list">
@@ -22,9 +22,16 @@
           <%= cuisine.price  %>
         </div>
 
-        <%= link_to "編集", "/admin/cuisines/#{cuisine.id}/edit", class: "edit" %>
+        <div class="group">
+          <div>
+            <%= link_to "編集", "/admin/cuisines/#{cuisine.id}/edit", class: "edit" %>
+          </div>
 
-        <%= link_to "削除", "/admin/cuisines/#{cuisine.id}", method: :delete , 'data-confirm' => "本当に消してもよろしいですか？"%>
+          <div>
+            <%= link_to "削除", "/admin/cuisines/#{cuisine.id}", method: :delete , 'data-confirm' => "本当に消してもよろしいですか？"%>
+          </div>
+        </div>
+
       </div>
     </div>
   <% end %>

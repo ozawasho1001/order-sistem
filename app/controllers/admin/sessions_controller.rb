@@ -6,7 +6,7 @@ class  Admin::SessionsController < Admin::BaseController
     user = User.find_by(email: params[:session][:email])
     if user && user.authenticate(params[:session][:password])
       log_in user
-      redirect_to admin_topics_path, success: 'ログインに成功しました。'
+      redirect_to admin_orders_path, success: 'ログインに成功しました。'
     else
       flash.now[:danger] = 'ログインに失敗しました。'
       render :new

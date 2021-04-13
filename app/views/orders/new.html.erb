@@ -1,27 +1,30 @@
-<div id="product_list">
-  <% @cuisines.each do |cuisine| %>
-    <div class="card">
-      <%= image_tag cuisine.image.url, class: "image" %>
+<%= form_with model: @orders do |f| %>
+  <div id="product_list">
+    <% @cuisines.each do |cuisine| %>
+      <div class="card">
+        <%= image_tag cuisine.image.url, class: "image" %>
 
-      <div class="content">
-        <div class="name">
-          <%= cuisine.name %>
+        <div class="content">
+          <div class="name">
+            <%= cuisine.name %>
+          </div>
+
+          <div class="detail">
+            <%= cuisine.text %>
+          </div>
         </div>
 
-        <div class="detail">
-          <%= cuisine.text  %>
+        <div class="footer">
+          <div class="price">
+            <%= cuisine.price %>
+          </div>
+
+          <div class="button">
+            <%= button_to "order", "/orders" , params: {id: cuisine.id} %>
+          </div>
         </div>
+
       </div>
-
-      <div class="footer">
-        <div class="price">
-          <%= cuisine.price  %>
-        </div>
-
-        <div class="button">
-          <%= button_to "order", "/" %>
-        </div>
-      </div>
-    </div>
-  <% end %>
-</div>
+    <% end %>
+  </div>
+<% end %>

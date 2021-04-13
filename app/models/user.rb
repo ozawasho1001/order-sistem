@@ -6,7 +6,7 @@
 #  name            :string(255)
 #  email           :string(255)
 #  password_digest :string(255)
-#  role            :integer          default("general"), not null
+#  role            :integer          default(1), not null
 #  admin           :boolean          default(FALSE), not null
 #
 class User < ApplicationRecord
