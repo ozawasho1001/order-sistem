@@ -1,2 +1,59 @@
-<div class= "admin_background_img">
-</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
+
+<%# app/assets 配下においたものはそれ専用の海藻に配置されるのでこのアクセスの仕方は出来ない。 %>
+<%# <link rel="stylesheet" href="css/style.css"> %>
+<%# <link rel="stylesheet" href="css/ress.css"> %>
+<%# <link rel="stylesheet" href="css/slick-theme.css"> %>
+<%# <link rel="stylesheet" href="css/slick.css"> %>
+<ul class="slider">
+  <li><img class="photo" src="/assets/top-img.jpg" alt=""></li>
+  <li><img class="photo" src="/assets/top1.png" alt=""></li>
+  <li><img class="photo" src="/assets/top2.jpg" alt=""></li>
+  <li><img class="photo" src="/assets/top3.jpg" alt=""></li>
+</ul>
+
+<script>
+var slider = tns({
+  container: '.slider',
+  items: 1,
+  "speed": 1000,
+  "autoplay": true,
+  "autoplayHoverPause": false,
+  "autoplayTimeout": 2200,
+  "autoHeight": true,
+  "autoplayText": [
+    "▶",
+    "❚❚"
+  ],
+  "swipeAngle": false
+});
+</script>
+
+
+
+
+
+
+<%# <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> %>
+<%# <script src="js/slick.js"></script> %>
+
+<script>
+/**
+$(document).ready(function(){
+  $('.slider').slick({
+
+  });
+});
+*/
+// document.addEventListener('DOMContentLoaded', function () {
+//   // document.querySelector('.slider').children
+//   console.log('loaded!')
+
+//   $('.slider').slick({
+//     arrows: true,
+//     infinite: false,
+//     dots: true,
+//   });
+// })
+// </script>
