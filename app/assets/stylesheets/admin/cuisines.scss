@@ -42,11 +42,7 @@
 }
 .wrap .container_group .container .cohesive #app label {
   padding: 20px;
-  border: 1px solid;
   cursor: pointer;
-}
-.wrap .container_group .container .cohesive #app label input {
-  display: none;
 }
 .wrap .container_group .container .cohesive input {
   padding: 10px;
@@ -167,7 +163,6 @@
 }
 #product_list .card .footer .price::before {
   content: "¥";
-  font-weight: bold;
 }
 #product_list .card .footer .button {
   margin: 20px 0;
