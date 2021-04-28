@@ -7,23 +7,17 @@
   <div class="group">
     <div class="container">
       <label>name</label>
-      <textarea name="name">
-        <%= @cuisine.name %>
-      </textarea>
+      <textarea name="name"><%= @cuisine.name.chomp %></textarea>
     </div>
 
     <div class="container fix">
       <label>price</label>
-      <textarea name="price">
-        <%= @cuisine.price %>
-      </textarea>
+      <textarea name="price"><%= @cuisine.price %></textarea>
     </div>
 
     <div class="container">
       <label>detail</label>
-      <textarea name="text">
-        <%= @cuisine.text %>
-      </textarea>
+      <textarea name="text"><%= @cuisine.text %></textarea>
     </div>
   </div>
 
