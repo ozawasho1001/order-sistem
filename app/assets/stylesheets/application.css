@@ -29,9 +29,23 @@ body {
   color: white;
   font-weight: bold;
   font-family: serif;
+  margin-left: 40px;
+
+}
+.link_wrapper .main_logo_group a {
+  text-decoration: none;
+  margin-left: 40px;
+}
+.link_wrapper .main_logo_group a p {
+  text-align: center;
+  margin: 0;
+  color: white;
+  font-family: serif;
+  font-size: 20px;
 }
 .main_logo_img {
-  margin-left: 40px;
+  width: 100px;
+
 }
 .main-content {
   height: auto;
