@@ -30,13 +30,13 @@ class  Admin::CuisinesController < Admin::BaseController
     cuisine = Cuisine.find_by(id: params[:id])
     cuisine.assign_attributes(name: params[:name], price: params[:price], text: params[:text])
     cuisine.save
-    redirect_to "/admin/cuisines"
+    redirect_to admin_cuisines_path
   end
 
   def destroy
     cuisine = Cuisine.find_by(id: params[:id])
     cuisine.destroy
-    redirect_to "/admin/cuisines"
+    redirect_to admin_cuisines_path
   end
 
   private
