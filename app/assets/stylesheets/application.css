@@ -104,10 +104,11 @@ h1 {
   position: fixed;
   width: 100%;
   z-index: 10000;
-  top: 5%;
-  left: 45%;
-  color: #337ab7;
-  font-size: 20px;
+  top: 11%;
+  left: 60%;
+  color: white;
+  font-size: 30px;
+  background-color: green;
 }
 .alert-danger {
   color: #FF3366;
